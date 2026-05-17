@@ -1,0 +1,57 @@
+:root {
+  --color-bg: #0d0d0d;
+  --color-surface: #154734;
+  --color-accent: #cfd82d;
+  --color-text: #e8e8e8;
+  --font-mono: "Space Mono", monospace;
+  --font-body: "DM Sans", sans-serif;
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text);
+  font-family: var(--font-body);
+}
+
+nav {
+  background-color: var(--color-surface);
+}
+
+.navbar-brand,
+.nav-link {
+  color: var(--color-text);
+}
+
+.nav-link:hover {
+  color: var(--color-accent);
+}
+
+.navbar-brand {
+  font-family: var(--font-mono);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.carousel-item img {
+  height: 80vh;
+  object-fit: cover;
+  /* object-position: center top; */
+}
+
+.carousel-item:nth-child(1) img {
+  object-position: center 50%;
+}
+
+.carousel-item:nth-child(2) img {
+  object-position: center top;
+}
+
+.carousel-item:nth-child(3) img {
+  object-position: center 30%;
+}
+
+.carousel-caption {
+  background-color: rgba(0, 0, 0, 0.55);
+  border-radius: 4px;
+  padding: 1rem 1.5rem;
+}
