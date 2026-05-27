@@ -53,5 +53,41 @@ nav {
 .carousel-caption {
   background-color: rgba(0, 0, 0, 0.55);
   border-radius: 4px;
-  padding: 1rem 1.5rem;
+  padding: 0.25rem 1.5rem;
+}
+
+#hero,
+#hero .carousel,
+#hero .carousel-inner,
+#hero .carousel-item {
+  height: 100vh;
+}
+
+#hero .carousel-item img {
+  height: 100%;
+  object-fit: cover;
+}
+
+/* About section */
+.badge {
+  background-color: transparent;
+  border: 1px solid var(--color-accent);
+  color: var(--color-accent);
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  padding: 0.35rem 0.75rem;
+  border-radius: 2px;
+}
+
+@media (max-width: 768px) {
+  #hero,
+  #hero .carousel,
+  #hero .carousel-inner,
+  #hero .carousel-item {
+    height: 50vh;
+  }
+
+  .carousel-item img {
+    height: 40vh;
+  }
 }
