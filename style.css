@@ -1,9 +1,10 @@
 :root {
-  --color-bg: #040d12; /* background */
-  --color-surface: #183d3d; /* navbar, cards, accordion */
-  --color-surface-alt: #5c8374; /* hover states, active items */
-  --color-accent: #93b1a6; /* badges, links, highlights */
-  --color-text: #e8e8e8;
+  --color-bg: #232a2e; /* background */
+  --color-surface: #2d353b; /* navbar, cards, accordion */
+  --color-surface-alt: #3d484d; /* hover states, active items */
+  --color-accent: #c9a84f; /* badges, links, highlights */
+  --color-text: #d3c6aa;
+  --toggler-icon: url("images/menu_bar.png");
   --font-mono: "Space Mono", monospace;
   --font-body: "DM Sans", sans-serif;
 }
@@ -12,6 +13,30 @@ body {
   background-color: var(--color-bg);
   color: var(--color-text);
   font-family: var(--font-body);
+  padding-top: 40px;
+}
+
+.btn-primary {
+  background-color: var(--color-accent);
+  border-color: var(--color-accent);
+  color: #040d12;
+}
+
+.btn-primary:hover {
+  background-color: var(--color-surface-alt);
+  border-color: var(--color-surface-alt);
+  color: #ffffff;
+}
+
+.btn-secondary {
+  background-color: transparent;
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+}
+
+.btn-secondary:hover {
+  background-color: var(--color-accent);
+  color: #040d12;
 }
 
 nav {
@@ -24,13 +49,21 @@ nav {
 }
 
 .nav-link:hover {
-  color: var(--color-accent);
+  color: var(--color-surface-alt);
 }
 
 .navbar-brand {
   font-family: var(--font-mono);
   font-weight: 700;
   letter-spacing: -0.02em;
+}
+
+.navbar-toggler {
+  border: none;
+}
+
+.navbar-toggler-icon {
+  background-image: var(--toggler-icon);
 }
 
 .carousel-item img {
@@ -71,7 +104,7 @@ nav {
 
 /* About section */
 h2 {
-  color: var(--color-accent);
+  /* color: var(--color-accent); */
   font-family: var(--font-mono);
   margin-bottom: 1.5rem;
 }
@@ -110,16 +143,74 @@ h2 {
 }
 
 .accordion-body {
-  background-color: #0f2c2c;
+  background-color: var(--color-surface-alt);
   color: var(--color-text);
 }
 
 .accordion-body h4 {
-  color: var(--color-accent);
+  /* color: var(--color-accent); */
+  font-style: italic;
   font-family: var(--font-mono);
   font-size: 0.85rem;
   letter-spacing: 0.05em;
   margin-bottom: 0.75rem;
+}
+
+/* Project section */
+.card-img-top {
+  border-radius: 4px;
+}
+
+/* Custom background for card */
+.card {
+  background-color: var(--color-surface);
+  color: var(--color-text); /* Ensure text is readable */
+  /* border: 1px solid var(--color-accent); */
+  border-radius: 12px;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+/* Optional hover effect */
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px var(--color-surface-alt) (0, 0, 0, 0.3);
+}
+
+/* Modal CSS */
+.modal-content,
+.modal-header,
+.modal-body,
+.modal-footer {
+  background-color: var(--color-surface);
+}
+
+/* Github Btn CSS*/
+.github-btn {
+  display: inline-flex;
+  align-items: center;
+  background-color: #24292e; /* GitHub dark gray */
+  color: white;
+  padding: 8px 14px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  transition: background-color 0.2s ease;
+}
+.github-btn:hover {
+  background-color: #444c56;
+}
+.github-btn svg {
+  margin-right: 8px;
+  fill: white;
+}
+
+/* Contact Section CSS */
+.bg-contact {
+  background-color: var(--color-surface);
 }
 
 @media (max-width: 768px) {

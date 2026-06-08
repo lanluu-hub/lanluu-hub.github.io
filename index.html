@@ -18,11 +18,11 @@
   <body>
     <header>
       <!-- Navbar -->
-      <nav class="navbar navbar-expand-lg">
+      <nav class="navbar fixed-top navbar-expand-lg">
         <div class="container-fluid">
           <a class="navbar-brand" href="#">Lan Luu</a>
           <button
-            class="navbar-toggler border"
+            class="navbar-toggler"
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#navbarSupportedContent"
@@ -179,8 +179,8 @@
 
       <!-- Previous Work -->
       <section class="py-5" id="experience">
+        <h2>Experience</h2>
         <div class="container">
-          <h2>Experience</h2>
           <div class="accordion" id="experienceAccordion">
             <div class="accordion-item">
               <h3 class="accordion-header" id="headingOne">
@@ -310,10 +310,507 @@
       </section>
 
       <!-- Projects -->
-      <section id="projects"></section>
+      <section id="projects" class="container-fluid mt-4">
+        <h2>Projects</h2>
+        <div class="row">
+          <!-- project 1 -->
+          <div
+            class="col-lg-4 d-flex justify-content-center mb-4"
+            id="project1"
+          >
+            <div class="card">
+              <div class="d-flex justify-content-center py-3">
+                <img
+                  src="images/chocan.png"
+                  class="card-img-top w-75"
+                  alt="ChocAn data center overview"
+                />
+              </div>
+              <div class="card-body">
+                <h3 class="card-title text-center">ChocAn Data Center</h3>
+                <p class="card-text">
+                  A terminal-based healthcare service management system for
+                  Chocoholics Anonymous built in C++, featuring role-based
+                  access (providers, managers, operators), SQLite-backed data
+                  persistence, and automated weekly financial reporting.
+                  Implemented modular architecture with design patterns and
+                  multi-terminal interfaces for concurrent user sessions.
+                </p>
+              </div>
+              <div class="d-flex justify-content-center mb-4">
+                <button
+                  type="button"
+                  class="btn btn-primary learn-more-button"
+                  data-bs-toggle="modal"
+                  data-bs-target="#project1Modal"
+                >
+                  Learn More
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- project 2-->
+          <div
+            class="col-lg-4 d-flex justify-content-center mb-4"
+            id="project2"
+          >
+            <div class="card">
+              <div class="d-flex justify-content-center py-3">
+                <img
+                  src="images/connect_4_ai.png"
+                  class="card-img-top w-75"
+                  alt="Connect four ai overview"
+                />
+              </div>
+              <div class="card-body">
+                <h3 class="card-title text-center">Connect Four AI</h3>
+                <p class="card-text">
+                  A reinforcement learning and game AI project that compares
+                  Deep Q-Learning agents against classical game-playing
+                  strategies for Connect Four, including a Minimax agent with
+                  alpha-beta pruning and self-play training to improve
+                  performance over time.
+                </p>
+              </div>
+              <div class="d-flex justify-content-center mb-4">
+                <button
+                  type="button"
+                  class="btn btn-primary learn-more-button"
+                  data-bs-toggle="modal"
+                  data-bs-target="#project2Modal"
+                >
+                  Learn More
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- project 3-->
+          <div
+            class="col-lg-4 d-flex justify-content-center mb-4"
+            id="project3"
+          >
+            <div class="card">
+              <div class="d-flex justify-content-center py-3">
+                <img
+                  src="images/interp.png"
+                  class="card-img-top w-75"
+                  alt="String DSL Interp overview"
+                />
+              </div>
+              <div class="card-body">
+                <h3 class="card-title text-center">Strings DSL Interpreter</h3>
+                <p class="card-text">
+                  A tree-walking interpreter for a dynamically typed expression
+                  language with a domain-specific extension for string
+                  manipulation, featuring lexical scoping, recursive functions,
+                  and mutable variables implemented in Python with Lark parser
+                  integration.
+                </p>
+              </div>
+              <div class="d-flex justify-content-center mb-4">
+                <button
+                  type="button"
+                  class="btn btn-primary learn-more-button"
+                  data-bs-toggle="modal"
+                  data-bs-target="#project3Modal"
+                >
+                  Learn More
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- end row -->
+      </section>
+      <!--Modal section-->
+      <div
+        class="modal fade"
+        id="project1Modal"
+        tabindex="-1"
+        aria-labelledby="project1Modal"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-scrollable">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h3 class="modal-title">ChocAn Data Center</h3>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <h4>Detail</h4>
+              <p>
+                The ChocAn Data Processing System is a C++-based terminal
+                application designed to manage healthcare-style service
+                workflows for Chocoholics Anonymous. It supports three distinct
+                user roles—providers, managers, and operators—each with
+                dedicated interfaces and responsibilities. Providers can
+                validate members, log services, and retrieve service
+                directories, while managers generate operational reports and
+                operators maintain core member and provider databases. The
+                system uses SQLite for persistent storage of all transactional
+                data and supports structured queries for report generation. A
+                menu-driven terminal interface ensures guided and validated
+                interactions across all workflows, maintaining data integrity
+                and consistency throughout the system.
+              </p>
+              <h4>My contribution</h4>
+              <p>
+                I designed the system architecture using Singleton and Facade
+                patterns to manage global state and unify role-based terminal
+                workflows. I implemented the SQLite persistence layer with
+                secure parameterized queries, built validation and billing logic
+                for provider workflows, and developed automated report
+                generation for members and providers. I also optimized database
+                performance through indexing and ensured robust input validation
+                across all terminal interfaces.
+              </p>
+              <h4>Tech Stacks</h4>
+              <div class="d-flex flex-wrap gap-2 mt-3">
+                <span class="badge">C++17</span>
+                <span class="badge">SQLite3</span>
+                <span class="badge">Makefile (g++)</span>
+                <span class="badge">STL (smart pointers, chrono)</span>
+                <span class="badge">Singleton Pattern</span>
+                <span class="badge">Facade Pattern</span>
+                <span class="badge">Terminal-based UI</span>
+                <span class="badge">Structured file I/O</span>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Close
+              </button>
+
+              <!-- GitHub button -->
+              <a
+                class="github-btn"
+                href="https://github.com/lanluu-hub/ChocAn_Data_Center"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <!-- GitHub logo as inline SVG -->
+                <svg
+                  height="16"
+                  width="16"
+                  viewBox="0 0 16 16"
+                  aria-hidden="true"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 
+              6.53 5.47 7.59.4.07.55-.17.55-.38 
+              0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52
+              0-.53.63-.01 1.08.58 1.23.82.72 1.21 
+              1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 
+              0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 
+              0 0 .67-.21 2.2.82a7.65 7.65 0 0 1 2-.27c.68 0 
+              1.36.09 2 .27 1.53-1.04 2.2-.82 
+              2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 
+              1.27.82 2.15 0 3.07-1.87 3.75-3.65 
+              3.95.29.25.54.73.54 1.48 0 1.07-.01 
+              1.93-.01 2.2 0 .21.15.46.55.38A8.013 
+              8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"
+                  ></path>
+                </svg>
+                View on GitHub
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="modal fade"
+        id="project2Modal"
+        tabindex="-1"
+        aria-labelledby="project2Modal"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-scrollable">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h3 class="modal-title">Connect Four AI</h3>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <h4>Detail</h4>
+              <p>
+                This project develops and evaluates AI agents for Connect Four
+                using both reinforcement learning and classical search-based
+                methods. The primary agent is a Deep Q-Network (DQN) implemented
+                in PyTorch and trained in a Gymnasium environment, where it
+                learns optimal strategies through experience replay and temporal
+                difference learning. The network uses a 3-layer architecture
+                with a 42-dimensional state representation of the 6×7 board and
+                separate policy and target networks to stabilize training.
+                Training includes epsilon-greedy exploration, controlled epsilon
+                decay, and evaluation metrics such as win rates and loss trends.
+              </p>
+              <p>
+                In parallel, a Minimax agent with alpha-beta pruning is
+                implemented as a strong rule-based baseline. It uses a heuristic
+                evaluation function that considers center control, consecutive
+                piece patterns, and opponent threats, along with action ordering
+                to improve search efficiency. The project also explores
+                self-play training, allowing DQN agents to progressively improve
+                by competing against earlier versions of themselves instead of
+                static opponents.
+              </p>
+              <h4>My contribution</h4>
+              <p>
+                I implemented the Minimax agent with alpha-beta pruning and
+                designed its heuristic evaluation function based on board
+                control, sequence detection, and threat blocking. I created the
+                DQNPlayer wrapper to load trained models and integrate them into
+                the evaluation pipeline for fair comparisons. I also built the
+                self-play training framework that iteratively trains new agents
+                against previous generations and visualizes win-rate
+                progression, and ensured compatibility and correctness of older
+                model evaluations within the testing system.
+              </p>
+              <h4>Tech Stacks</h4>
+              <div class="d-flex flex-wrap gap-2 mt-3">
+                <span class="badge">Python 3</span>
+                <span class="badge">PyTorch</span>
+                <span class="badge">Gymnasium (Connect Four)</span>
+                <span class="badge">NumPy</span>
+                <span class="badge">Matplotlib</span>
+                <span class="badge">Stable-Baselines3</span>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Close
+              </button>
+
+              <!-- GitHub button -->
+              <a
+                class="github-btn"
+                href="https://github.com/lanluu-hub/CS-541-Final-Project"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <!-- GitHub logo as inline SVG -->
+                <svg
+                  height="16"
+                  width="16"
+                  viewBox="0 0 16 16"
+                  aria-hidden="true"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 
+              6.53 5.47 7.59.4.07.55-.17.55-.38 
+              0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52
+              0-.53.63-.01 1.08.58 1.23.82.72 1.21 
+              1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 
+              0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 
+              0 0 .67-.21 2.2.82a7.65 7.65 0 0 1 2-.27c.68 0 
+              1.36.09 2 .27 1.53-1.04 2.2-.82 
+              2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 
+              1.27.82 2.15 0 3.07-1.87 3.75-3.65 
+              3.95.29.25.54.73.54 1.48 0 1.07-.01 
+              1.93-.01 2.2 0 .21.15.46.55.38A8.013 
+              8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"
+                  ></path>
+                </svg>
+                View on GitHub
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="modal fade"
+        id="project3Modal"
+        tabindex="-1"
+        aria-labelledby="project3Modal"
+        aria-hidden="true"
+      >
+        <div class="modal-dialog modal-dialog-scrollable">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h3 class="modal-title">Strings DSL Interpreter</h3>
+              <button
+                type="button"
+                class="btn-close"
+                data-bs-dismiss="modal"
+                aria-label="Close"
+              ></button>
+            </div>
+            <div class="modal-body">
+              <h4>Detail</h4>
+              <p>
+                The CS358 Interpreter is a complete expression language
+                implementation built in Python that supports core functional
+                programming constructs and an extensible string DSL. The system
+                consists of three main components: an abstract syntax tree (AST)
+                definition and evaluator in interp.py, a Lark-based parser with
+                concrete syntax grammar in expr.lark, and an AST transformer in
+                parse_run.py. The core language includes arithmetic and boolean
+                operations with short-circuit evaluation, conditional
+                expressions, variable binding with lexical scoping via immutable
+                environments, and first-class functions with closure support
+                enabling recursion. The interpreter uses a tree-walking
+                evaluation pattern with environment passing, models mutable
+                state through memory locations (singleton lists), and includes
+                comprehensive type checking with runtime error reporting. The
+                string DSL extension adds concatenation (++), replace (with
+                first-match semantics), reverse, uppercase, and lowercase
+                operations. The grammar uses Earley parsing with explicit
+                precedence rules, handles escape sequences in string literals
+                via ast.literal_eval, and treats true/false as parsed
+                identifiers converted to boolean literals during AST
+                transformation.
+              </p>
+              <h4>My contribution</h4>
+              <p>
+                I implemented the complete AST node definitions and the
+                recursive evaluator with support for all core language features
+                including arithmetic, boolean logic, variable binding, functions
+                with closures, and conditionals. I designed and implemented the
+                string DSL extension with Concat, Replace, Reverse, Uppercase,
+                and Lowercase operations. I built the Lark grammar (expr.lark)
+                with proper operator precedence and rules for parsing all
+                language constructs, and implemented the transformer in
+                parse_run.py to convert parse trees to ASTs. I also added
+                mutable variable support through memory locations, imperative
+                operations (sequencing, assignment, show/read), and
+                comprehensive error handling with type validation.
+              </p>
+              <h4>Tech Stacks</h4>
+              <div class="d-flex flex-wrap gap-2 mt-3">
+                <span class="badge">Python 3.12</span>
+                <span class="badge">Lark (Earley parser)</span>
+                <span class="badge">dataclasses</span>
+                <span class="badge">pattern matching (Python 3.10+)</span>
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-secondary"
+                data-bs-dismiss="modal"
+              >
+                Close
+              </button>
+
+              <!-- GitHub button -->
+              <a
+                class="github-btn"
+                href="https://github.com/lanluu-hub/cs358_project_interp"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <!-- GitHub logo as inline SVG -->
+                <svg
+                  height="16"
+                  width="16"
+                  viewBox="0 0 16 16"
+                  aria-hidden="true"
+                >
+                  <path
+                    fill-rule="evenodd"
+                    d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 
+              6.53 5.47 7.59.4.07.55-.17.55-.38 
+              0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52
+              0-.53.63-.01 1.08.58 1.23.82.72 1.21 
+              1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 
+              0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 
+              0 0 .67-.21 2.2.82a7.65 7.65 0 0 1 2-.27c.68 0 
+              1.36.09 2 .27 1.53-1.04 2.2-.82 
+              2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 
+              1.27.82 2.15 0 3.07-1.87 3.75-3.65 
+              3.95.29.25.54.73.54 1.48 0 1.07-.01 
+              1.93-.01 2.2 0 .21.15.46.55.38A8.013 
+              8.013 0 0 0 16 8c0-4.42-3.58-8-8-8z"
+                  ></path>
+                </svg>
+                View on GitHub
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
 
       <!-- Contact -->
-      <section id="contact"></section>
+      <section id="contact" class="container-fluid mt-4">
+        <h2>Contact</h2>
+        <div class="bg-contact shadow p-3 mb-5 mx-5 rounded">
+          <!-- https://formspree.io/f/xvznazle -->
+          <form
+            action="#"
+            method="GET"
+            class="px-3"
+            id="contactForm"
+            novalidate
+          >
+            <div class="row mb-3">
+              <label for="name" class="col-sm-2 col-form-label">Name</label>
+              <div class="col-sm-10">
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  class="form-control"
+                  required
+                />
+              </div>
+            </div>
+            <div class="row mb-3">
+              <label for="email" class="col-sm-2 col-form-label">Email</label>
+              <div class="col-sm-10">
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  class="form-control"
+                  placeholder="name@example.com"
+                  required
+                />
+              </div>
+            </div>
+            <div class="row mb-3">
+              <label for="message" class="col-sm-2 col-form-label"
+                >Message</label
+              >
+              <div class="col-sm-10">
+                <textarea
+                  class="form-control"
+                  id="message"
+                  name="message"
+                  rows="3"
+                  required
+                ></textarea>
+              </div>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="reset" class="btn btn-secondary">Reset</button>
+            <div id="formFeedback" class="mt-3" aria-live="polite"></div>
+          </form>
+        </div>
+      </section>
     </main>
     <footer>
       <!-- Footer -->
