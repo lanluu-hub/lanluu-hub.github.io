@@ -175,7 +175,7 @@ h2 {
 /* Optional hover effect */
 .card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 25px var(--color-surface-alt) (0, 0, 0, 0.3);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
 }
 
 /* Modal CSS */
@@ -211,6 +211,15 @@ h2 {
 /* Contact Section CSS */
 .bg-contact {
   background-color: var(--color-surface);
+}
+
+footer a {
+  text-decoration: none;
+  color: var(--color-text);
+}
+
+footer a:hover {
+  color: var(--color-accent);
 }
 
 @media (max-width: 768px) {

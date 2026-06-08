@@ -52,7 +52,7 @@
     </header>
     <main>
       <!-- Hero -->
-      <section id="hero">
+      <section id="hero" class="d-none d-md-block">
         <div id="carouselHero" class="carousel slide" data-bs-ride="carousel">
           <div class="carousel-indicators">
             <button
@@ -181,7 +181,7 @@
       <!-- Previous Work -->
       <section class="py-5" id="experience">
         <h2>Experience</h2>
-        <div class="container">
+        <div class="container-fluid">
           <div class="accordion" id="experienceAccordion">
             <div class="accordion-item">
               <h3 class="accordion-header" id="headingOne">
@@ -320,7 +320,7 @@
             id="project1"
           >
             <div class="card">
-              <div class="d-flex justify-content-center py-3">
+              <div class="d-md-flex justify-content-center py-3 d-none">
                 <img
                   src="images/chocan.png"
                   class="card-img-top w-75"
@@ -357,7 +357,7 @@
             id="project2"
           >
             <div class="card">
-              <div class="d-flex justify-content-center py-3">
+              <div class="d-md-flex justify-content-center py-3 d-none">
                 <img
                   src="images/connect_4_ai.png"
                   class="card-img-top w-75"
@@ -393,7 +393,7 @@
             id="project3"
           >
             <div class="card">
-              <div class="d-flex justify-content-center py-3">
+              <div class="d-md-flex justify-content-center py-3 d-none">
                 <img
                   src="images/interp.png"
                   class="card-img-top w-75"
@@ -758,7 +758,7 @@
       <!-- Contact -->
       <section id="contact" class="container-fluid mt-4">
         <h2>Contact</h2>
-        <div class="bg-contact shadow p-3 mb-5 mx-5 rounded">
+        <div class="bg-contact shadow p-3 mb-5 mx-md-5 rounded">
           <!-- https://formspree.io/f/xvznazle -->
           <form
             action="https://formspree.io/f/xvznazle"
@@ -804,8 +804,11 @@
         </div>
       </section>
     </main>
-    <footer>
-      <!-- Footer -->
+    <footer class="bg-dark text-center">
+      <div class="text-center p-3">
+        &copy; 2026 Lan Luu |
+        <a href="mailto:lanluu@pdx.edu">lanluu@pdx.edu</a>
+      </div>
     </footer>
   </body>
 </html>
