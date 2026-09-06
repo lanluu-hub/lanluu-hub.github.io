@@ -1,71 +1,75 @@
-# Lan Luu – Portfolio
+# React + TypeScript + Vite
 
-Personal portfolio website for Lan Luu, CS senior at Portland State University.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-## Live Site
+Currently, two official plugins are available:
 
-[https://lanluu-hub.github.io](https://lanluu-hub.github.io)
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
 
-## GitHub Repo
+## React Compiler
 
-[https://github.com/lanluu-hub/lanluu-hub.github.io](https://github.com/lanluu-hub/lanluu-hub.github.io)
+The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
 
-## Running Locally
+## Expanding the ESLint configuration
 
-No build step required. Just open `index.html` in a browser, or use a local dev server:
+If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
 
-```bash
-# Using Python
-python -m http.server 8000
+```js
+export default defineConfig([
+  globalIgnores(['dist']),
+  {
+    files: ['**/*.{ts,tsx}'],
+    extends: [
+      // Other configs...
 
-# Using Node (npx)
-npx serve .
+      // Remove tseslint.configs.recommended and replace with this
+      tseslint.configs.recommendedTypeChecked,
+      // Alternatively, use this for stricter rules
+      tseslint.configs.strictTypeChecked,
+      // Optionally, add this for stylistic rules
+      tseslint.configs.stylisticTypeChecked,
+
+      // Other configs...
+    ],
+    languageOptions: {
+      parserOptions: {
+        project: ['./tsconfig.node.json', './tsconfig.app.json'],
+        tsconfigRootDir: import.meta.dirname,
+      },
+      // other options...
+    },
+  },
+])
+
 ```
 
-Then open `http://localhost:8000`.
+You can also install [eslint-plugin-react-x](https://npmx.dev/package/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://npmx.dev/package/eslint-plugin-react-dom) for React-specific lint rules:
 
-## Project Structure
+```js
+// eslint.config.js
+import reactX from 'eslint-plugin-react-x'
+import reactDom from 'eslint-plugin-react-dom'
+
+export default defineConfig([
+  globalIgnores(['dist']),
+  {
+    files: ['**/*.{ts,tsx}'],
+    extends: [
+      // Other configs...
+      // Enable lint rules for React
+      reactX.configs['recommended-typescript'],
+      // Enable lint rules for React DOM
+      reactDom.configs.recommended,
+    ],
+    languageOptions: {
+      parserOptions: {
+        project: ['./tsconfig.node.json', './tsconfig.app.json'],
+        tsconfigRootDir: import.meta.dirname,
+      },
+      // other options...
+    },
+  },
+])
 
 ```
-portfolio/
-├── index.html      # Single-page site
-├── style.css       # All custom styles
-├── script.js       # Form validation and interactivity
-├── images/         # Local photos and project images
-└── README.md
-```
-
-## Technologies Used
-
-- HTML5 (semantic markup)
-- CSS3 (custom properties, flexbox)
-- JavaScript ES6+ (async/await, fetch, DOM manipulation, form validation)
-- [Bootstrap 5.3.3](https://getbootstrap.com/) – layout, navbar, carousel, accordion, modals
-- [Google Fonts](https://fonts.google.com/) – Space Mono, DM Sans
-- [Formspree](https://formspree.io/) – contact form email delivery
-
-## Sections
-
-- **Hero** – Full-viewport Bootstrap carousel with personal photos
-- **About** – Two-column layout with photo and bio, skill badges
-- **Experience** – Bootstrap accordion with work history
-- **Projects** – Bootstrap cards with modals for ChocAn, Connect Four AI, and Strings DSL Interpreter
-- **Contact** – Form with client-side JS validation and Formspree integration
-- **Footer** – Copyright and PSU email
-
-## Outside Sources
-
-- Bootstrap 5.3 docs: https://getbootstrap.com/docs/5.3/
-- Bootstrap Carousel: https://getbootstrap.com/docs/5.3/components/carousel/
-- Bootstrap Accordion: https://getbootstrap.com/docs/5.3/components/accordion/
-- Bootstrap Form Validation: https://getbootstrap.com/docs/5.3/forms/validation/
-- Google Fonts: https://fonts.google.com/
-- PSU Brand Colors: https://www.pdx.edu/university-communications/tools-and-templates/brand-colors
-- MDN Fetch API: https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API/Using_Fetch
-- MDN FormData: https://developer.mozilla.org/en-US/docs/Web/API/FormData
-- Formspree AJAX docs: https://help.formspree.io/hc/en-us/articles/360013470814
-- W3Schools JS Validation: https://www.w3schools.com/js/js_validation.asp
-- MDN Form Validation: https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Forms/Form_validation
-- WAVE Web Accessibility Tool: https://wave.webaim.org/
-- GitHub SVG icon: https://github.com/logos
-- ChatGPT – project image generation and README.md text refine
