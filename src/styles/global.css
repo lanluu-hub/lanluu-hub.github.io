@@ -1,18 +1,83 @@
 :root {
-  --color-bg: #232a2e; /* background */
-  --color-surface: #2d353b; /* navbar, cards, accordion */
-  --color-surface-alt: #3d484d; /* hover states, active items */
-  --color-accent: #c9a84f; /* badges, links, highlights */
+  --color-bg: #232a2e;
+  --color-surface: #2d353b;
+  --color-accent: #c9a84f;
   --color-text: #d3c6aa;
   --font-mono: "Space Mono", monospace;
   --font-body: "DM Sans", sans-serif;
 }
 
 body {
+  margin: 0;
   background-color: var(--color-bg);
   color: var(--color-text);
   font-family: var(--font-body);
-  margin: 0;
-  padding: 0 10px;
-  width: 100%;
+  line-height: 1.7;
+}
+
+header {
+  background-color: var(--color-surface);
+}
+
+header .navbar-brand {
+  color: var(--color-accent);
+  font-family: var(--font-mono);
+}
+
+header .navbar-brand:hover {
+  color: #e0c477;
+}
+
+/* Hero */
+section[aria-labelledby="hero-title"] {
+  padding-block: clamp(3rem, 8vw, 7rem);
+}
+
+#hero-title {
+  margin-bottom: 1rem;
+  color: var(--color-accent);
+  font-family: var(--font-mono);
+  font-size: clamp(2.5rem, 7vw, 4.5rem);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.04em;
+}
+
+#hero-title + p {
+  margin-bottom: 1.5rem;
+  color: #f0ece2;
+  font-size: clamp(1.125rem, 2.5vw, 1.5rem);
+  line-height: 1.5;
+}
+
+section[aria-labelledby="hero-title"] p {
+  max-width: 60ch;
+}
+
+section[aria-labelledby="hero-title"] .btn {
+  margin-top: 1rem;
+  padding: 0.75rem 1.25rem;
+  --bs-btn-color: var(--color-accent);
+  --bs-btn-border-color: var(--color-accent);
+  --bs-btn-hover-color: var(--color-bg);
+  --bs-btn-hover-bg: var(--color-accent);
+  --bs-btn-hover-border-color: var(--color-accent);
+  --bs-btn-active-color: var(--color-bg);
+  --bs-btn-active-bg: var(--color-accent);
+  --bs-btn-active-border-color: var(--color-accent);
+}
+
+footer a {
+  color: var(--color-accent);
+  text-underline-offset: 0.2em;
+}
+
+footer a:hover {
+  color: #e0c477;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid var(--color-accent);
+  outline-offset: 4px;
 }
