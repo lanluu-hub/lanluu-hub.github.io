@@ -81,3 +81,42 @@ button:focus-visible {
   outline: 3px solid var(--color-accent);
   outline-offset: 4px;
 }
+
+.not-found {
+  display: grid;
+  place-items: center;
+  min-height: 65vh;
+  padding-block: clamp(3rem, 8vw, 6rem);
+}
+
+.not-found__code {
+  margin-bottom: 1rem;
+  color: var(--color-accent);
+  font-family: var(--font-mono);
+  font-size: clamp(4rem, 15vw, 8rem);
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.06em;
+}
+
+.not-found h1 {
+  margin-bottom: 1rem;
+  color: #f0ece2;
+  font-size: clamp(1.75rem, 5vw, 2.5rem);
+}
+
+.not-found__message {
+  max-width: 42ch;
+  margin: 0 auto 2rem;
+}
+
+.not-found .btn {
+  --bs-btn-color: var(--color-accent);
+  --bs-btn-border-color: var(--color-accent);
+  --bs-btn-hover-color: var(--color-bg);
+  --bs-btn-hover-bg: var(--color-accent);
+  --bs-btn-hover-border-color: var(--color-accent);
+  --bs-btn-active-color: var(--color-bg);
+  --bs-btn-active-bg: var(--color-accent);
+  --bs-btn-active-border-color: var(--color-accent);
+}
