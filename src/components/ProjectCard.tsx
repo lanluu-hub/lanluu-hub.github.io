@@ -8,7 +8,7 @@ type ProjectCardProps = {
 
 function ProjectCard({ project }: ProjectCardProps) {
   return (
-    <Card as="article" data-bs-theme="dark">
+    <Card as="article" data-bs-theme="dark" className="h-100">
       <Card.Body>
         <Card.Title as="h3">{project.title}</Card.Title>
         <p>{project.role}</p>

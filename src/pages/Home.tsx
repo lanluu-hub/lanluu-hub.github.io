@@ -1,5 +1,5 @@
 import { Link } from "react-router";
-import { Container } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
 import { projects } from "../data/projects";
 import ProjectCard from "../components/ProjectCard";
 
@@ -23,12 +23,27 @@ function Home() {
             View IDX project
           </Link>
         </section>
+
         <section className="py-5" aria-labelledby="selected-work-title">
           <h2 id="selected-work-title">Selected Work</h2>
 
-          {projects.map((project) => (
-            <ProjectCard key={project.slug} project={project} />
-          ))}
+          <Row className="g-4">
+            {projects.map((project) => (
+              <Col
+                key={project.slug}
+                xs={12}
+                lg={
+                  project.slug === "idx-property-search"
+                    ? 7
+                    : project.slug === "volunteernet"
+                      ? 5
+                      : 6
+                }
+              >
+                <ProjectCard project={project} />
+              </Col>
+            ))}
+          </Row>
         </section>
       </Container>
     </main>
