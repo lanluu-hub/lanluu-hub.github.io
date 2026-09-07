@@ -4,6 +4,7 @@ import { projects } from "../data/projects";
 import ProjectCard from "../components/ProjectCard";
 import { experiences } from "../data/experience";
 import ExperienceItem from "../components/ExperienceItem";
+import { skillGroups } from "../data/skills";
 
 function Home() {
   return (
@@ -54,6 +55,22 @@ function Home() {
           {experiences.map((experience) => (
             <ExperienceItem key={experience.id} experience={experience} />
           ))}
+        </section>
+
+        <section className="py-5" aria-labelledby="skills-title">
+          <h2 id="skills-title">Technical Skills</h2>
+          <Row className="g-4">
+            {skillGroups.map((skillGroup) => (
+              <Col key={skillGroup.category} xs={12} md={6}>
+                <h3>{skillGroup.category}</h3>
+                <ul>
+                  {skillGroup.items.map((item) => (
+                    <li key={item}>{item}</li>
+                  ))}
+                </ul>
+              </Col>
+            ))}
+          </Row>
         </section>
       </Container>
     </main>
