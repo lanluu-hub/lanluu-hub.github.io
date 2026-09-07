@@ -1,8 +1,15 @@
+import { Routes, Route } from "react-router";
+import Home from "./pages/Home";
+import ProjectDetail from "./pages/ProjectDetail";
+import NotFound from "./pages/NotFound";
+
 function App() {
   return (
-    <>
-      <main>Lan Luu, Software Developer</main>
-    </>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/projects/:slug" element={<ProjectDetail />} />
+      <Route path="*" element={<NotFound />} />
+    </Routes>
   );
 }
 
