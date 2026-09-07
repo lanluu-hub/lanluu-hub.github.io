@@ -72,6 +72,64 @@ function Home() {
             ))}
           </Row>
         </section>
+
+        <section className="py-5" aria-labelledby="about-title">
+          <h2 id="about-title">About / Education</h2>
+          <Row className="g-4">
+            <Col xs={12} md={6}>
+              <h3>About</h3>
+              <p>
+                I’m a Computer Science senior based in Portland, Oregon, focused
+                on full-stack software development. Through my internship and
+                capstone work, I’ve built applications independently and
+                contributed to an existing team codebase. I also bring
+                professional experience in semiconductor manufacturing.
+              </p>
+            </Col>
+            <Col xs={12} md={6}>
+              <h3>Education</h3>
+              <ul>
+                <li>
+                  <p>
+                    <strong>Portland State University</strong> — B.S. Computer
+                    Science, expected December 2026; <strong>GPA: 3.99</strong>.
+                  </p>
+                </li>
+                <li>
+                  <p>
+                    <strong>Mt. Hood Community College</strong> — Associate of
+                    Science Transfer in Computer Science, June 2024.
+                  </p>
+                </li>
+              </ul>
+            </Col>
+          </Row>
+        </section>
+
+        <section className="py-5" aria-labelledby="contact-title">
+          <h2 id="contact-title">Contact</h2>
+          <p>
+            Interested in discussing a software development opportunity? Get in
+            touch.
+          </p>
+          <div className="d-flex flex-wrap gap-3">
+            <a href="mailto:lanluu@pdx.edu" className="btn btn-outline-light">
+              Email
+            </a>
+            <a
+              href="https://github.com/lanluu-hub"
+              className="btn btn-outline-light"
+            >
+              GitHub
+            </a>
+            <a
+              href="https://www.linkedin.com/in/lan-luu-4b341424a/"
+              className="btn btn-outline-light"
+            >
+              LinkedIn
+            </a>
+          </div>
+        </section>
       </Container>
     </main>
   );
