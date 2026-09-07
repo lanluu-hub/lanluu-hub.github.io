@@ -12,4 +12,7 @@ body {
   background-color: var(--color-bg);
   color: var(--color-text);
   font-family: var(--font-body);
+  margin: 0;
+  padding: 0 10px;
+  width: 100%;
 }

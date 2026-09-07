@@ -1,8 +1,8 @@
 function ProjectDetail() {
   return (
-    <section>
-      <h2>placeholder heading</h2>
-    </section>
+    <main>
+      <h1>placeholder heading</h1>
+    </main>
   );
 }
 

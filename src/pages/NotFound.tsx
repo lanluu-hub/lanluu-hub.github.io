@@ -2,12 +2,12 @@ import { Link } from "react-router";
 
 function NotFound() {
   return (
-    <section>
-      <h2>Page not found.</h2>
+    <main>
+      <h1>Page not found.</h1>
       <p>
         <Link to="/">back to Home</Link>
       </p>
-    </section>
+    </main>
   );
 }
 
