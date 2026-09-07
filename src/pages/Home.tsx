@@ -2,6 +2,8 @@ import { Link } from "react-router";
 import { Container, Row, Col } from "react-bootstrap";
 import { projects } from "../data/projects";
 import ProjectCard from "../components/ProjectCard";
+import { experiences } from "../data/experience";
+import ExperienceItem from "../components/ExperienceItem";
 
 function Home() {
   return (
@@ -44,6 +46,14 @@ function Home() {
               </Col>
             ))}
           </Row>
+        </section>
+
+        <section className="py-5" aria-labelledby="experience-title">
+          <h2 id="experience-title">Experience</h2>
+
+          {experiences.map((experience) => (
+            <ExperienceItem key={experience.id} experience={experience} />
+          ))}
         </section>
       </Container>
     </main>

@@ -31,7 +31,7 @@ export const projects: Project[] = [
     summary:
       "Contributed the central application integration layer, domain models, terminal workflows, and initial SQLite integration to a team-built data center application.",
     role: "Team software engineering project",
-    technologies: ["C++", "Make", "HonoSQLite"],
+    technologies: ["C++", "Make", "SQLite"],
     repositoryUrl: "https://github.com/lanluu-hub/ChocAn_Data_Center",
   },
   {
