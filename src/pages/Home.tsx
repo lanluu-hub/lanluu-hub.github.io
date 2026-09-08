@@ -27,7 +27,7 @@ function Home() {
   }, [location]);
 
   return (
-    <main>
+    <main className="home-page">
       <Container>
         <section aria-labelledby="hero-title">
           <h1 id="hero-title">Lan Luu</h1>
@@ -58,7 +58,7 @@ function Home() {
         </section>
 
         <section
-          className="py-5"
+          className="home-section"
           aria-labelledby="selected-work-title"
           id="selected-work"
         >
@@ -84,7 +84,7 @@ function Home() {
         </section>
 
         <section
-          className="py-5"
+          className="home-section"
           aria-labelledby="experience-title"
           id="experience"
         >
@@ -95,13 +95,13 @@ function Home() {
           ))}
         </section>
 
-        <section className="py-5" aria-labelledby="skills-title">
+        <section className="home-section" aria-labelledby="skills-title">
           <h2 id="skills-title">Technical Skills</h2>
           <Row className="g-4">
             {skillGroups.map((skillGroup) => (
               <Col key={skillGroup.category} xs={12} md={6}>
                 <h3>{skillGroup.category}</h3>
-                <ul>
+                <ul className="skill-list">
                   {skillGroup.items.map((item) => (
                     <li key={item}>{item}</li>
                   ))}
@@ -111,7 +111,11 @@ function Home() {
           </Row>
         </section>
 
-        <section className="py-5" aria-labelledby="about-title" id="about">
+        <section
+          className="home-section"
+          aria-labelledby="about-title"
+          id="about"
+        >
           <h2 id="about-title">About / Education</h2>
           <Row className="g-4">
             <Col xs={12} md={6}>
@@ -126,7 +130,7 @@ function Home() {
             </Col>
             <Col xs={12} md={6}>
               <h3>Education</h3>
-              <ul>
+              <ul className="education-list">
                 <li>
                   <p>
                     <strong>Portland State University</strong> — B.S. Computer
@@ -144,7 +148,11 @@ function Home() {
           </Row>
         </section>
 
-        <section className="py-5" aria-labelledby="contact-title" id="contact">
+        <section
+          className="home-section"
+          aria-labelledby="contact-title"
+          id="contact"
+        >
           <h2 id="contact-title">Contact</h2>
           <p>
             Interested in discussing a software development opportunity? Get in
