@@ -65,16 +65,17 @@ function ProjectDetail() {
             ))}
           </ul>
         </section>
-        <section className="project-detail__section">
-          {project.repositoryUrl && (
+
+        {project.repositoryUrl && (
+          <section className="project-detail__section">
             <a
               href={project.repositoryUrl}
               className="btn btn-outline-light mt-4"
             >
               View repository
             </a>
-          )}
-        </section>
+          </section>
+        )}
       </Container>
     </main>
   );
