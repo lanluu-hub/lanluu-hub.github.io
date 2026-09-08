@@ -120,3 +120,86 @@ button:focus-visible {
   --bs-btn-active-bg: var(--color-accent);
   --bs-btn-active-border-color: var(--color-accent);
 }
+
+.project-detail {
+  padding-block: clamp(2rem, 6vw, 5rem);
+}
+
+.project-detail__content {
+  max-width: 860px;
+}
+
+.project-detail h1 {
+  margin-bottom: 1rem;
+  color: var(--color-accent);
+  font-family: var(--font-mono);
+  font-size: clamp(2rem, 5vw, 3.25rem);
+  line-height: 1.2;
+  letter-spacing: -0.035em;
+  overflow-wrap: anywhere;
+}
+
+.project-detail__role {
+  margin-bottom: 1.25rem;
+  color: #f0ece2;
+  font-weight: 500;
+}
+
+.project-detail .lead {
+  max-width: 60ch;
+  line-height: 1.65;
+}
+
+.project-detail__section {
+  margin-top: 2.5rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgb(201 168 79 / 25%);
+}
+
+.project-detail h2 {
+  margin-bottom: 1.25rem;
+  color: #f0ece2;
+  font-size: clamp(1.4rem, 3vw, 1.75rem);
+}
+
+.project-detail h3 {
+  margin-bottom: 0.75rem;
+  color: var(--color-accent);
+  font-size: 1.125rem;
+}
+
+.project-detail li + li {
+  margin-top: 0.5rem;
+}
+
+.project-detail__technology {
+  padding: 0.35rem 0.75rem;
+  border: 1px solid rgb(201 168 79 / 30%);
+  border-radius: 0.375rem;
+  background-color: var(--color-surface);
+  font-size: 0.9rem;
+}
+
+.project-detail .project-detail__technology {
+  margin-top: 0;
+}
+
+.project-detail a:not(.btn) {
+  color: var(--color-accent);
+  text-underline-offset: 0.2em;
+}
+
+.project-detail a:not(.btn):hover {
+  color: #e0c477;
+}
+
+.project-detail .btn {
+  --bs-btn-color: var(--color-accent);
+  --bs-btn-border-color: var(--color-accent);
+  --bs-btn-hover-color: var(--color-bg);
+  --bs-btn-hover-bg: var(--color-accent);
+  --bs-btn-hover-border-color: var(--color-accent);
+  --bs-btn-active-color: var(--color-bg);
+  --bs-btn-active-bg: var(--color-accent);
+  --bs-btn-active-border-color: var(--color-accent);
+}
