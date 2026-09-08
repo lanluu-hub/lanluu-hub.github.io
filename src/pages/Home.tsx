@@ -38,18 +38,23 @@ function Home() {
             Computer Science at Portland State University, graduating December
             2026.
           </p>
-          <button
-            className="btn btn-outline-light"
-            type="button"
-            onClick={() => {
-              document.getElementById("selected-work")?.scrollIntoView({
-                behavior: "instant",
-                block: "start",
-              });
-            }}
-          >
-            View My Work.
-          </button>
+          <div className="d-flex flex-wrap gap-3">
+            <button
+              className="btn btn-outline-light"
+              type="button"
+              onClick={() => {
+                document.getElementById("selected-work")?.scrollIntoView({
+                  behavior: "instant",
+                  block: "start",
+                });
+              }}
+            >
+              View My Work
+            </button>
+            <a className="btn btn-outline-light" href="/Lan-Luu-Resume.pdf">
+              View Resume
+            </a>
+          </div>
         </section>
 
         <section
