@@ -1,4 +1,5 @@
-import { Link } from "react-router";
+import { useEffect } from "react";
+import { useLocation } from "react-router";
 import { Container, Row, Col } from "react-bootstrap";
 import { projects } from "../data/projects";
 import ProjectCard from "../components/ProjectCard";
@@ -7,6 +8,24 @@ import ExperienceItem from "../components/ExperienceItem";
 import { skillGroups } from "../data/skills";
 
 function Home() {
+  const location = useLocation();
+
+  useEffect(() => {
+    const sectionId = new URLSearchParams(location.search).get("section");
+
+    if (sectionId) {
+      document.getElementById(sectionId)?.scrollIntoView({
+        behavior: "instant",
+        block: "start",
+      });
+    } else {
+      window.scrollTo({
+        top: 0,
+        behavior: "instant",
+      });
+    }
+  }, [location]);
+
   return (
     <main>
       <Container>
@@ -19,15 +38,25 @@ function Home() {
             Computer Science at Portland State University, graduating December
             2026.
           </p>
-          <Link
-            to="/projects/idx-property-search"
+          <button
             className="btn btn-outline-light"
+            type="button"
+            onClick={() => {
+              document.getElementById("selected-work")?.scrollIntoView({
+                behavior: "instant",
+                block: "start",
+              });
+            }}
           >
-            View IDX project
-          </Link>
+            View My Work.
+          </button>
         </section>
 
-        <section className="py-5" aria-labelledby="selected-work-title">
+        <section
+          className="py-5"
+          aria-labelledby="selected-work-title"
+          id="selected-work"
+        >
           <h2 id="selected-work-title">Selected Work</h2>
 
           <Row className="g-4">
@@ -49,7 +78,11 @@ function Home() {
           </Row>
         </section>
 
-        <section className="py-5" aria-labelledby="experience-title">
+        <section
+          className="py-5"
+          aria-labelledby="experience-title"
+          id="experience"
+        >
           <h2 id="experience-title">Experience</h2>
 
           {experiences.map((experience) => (
@@ -73,7 +106,7 @@ function Home() {
           </Row>
         </section>
 
-        <section className="py-5" aria-labelledby="about-title">
+        <section className="py-5" aria-labelledby="about-title" id="about">
           <h2 id="about-title">About / Education</h2>
           <Row className="g-4">
             <Col xs={12} md={6}>
@@ -106,7 +139,7 @@ function Home() {
           </Row>
         </section>
 
-        <section className="py-5" aria-labelledby="contact-title">
+        <section className="py-5" aria-labelledby="contact-title" id="contact">
           <h2 id="contact-title">Contact</h2>
           <p>
             Interested in discussing a software development opportunity? Get in
